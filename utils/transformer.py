@@ -73,6 +73,8 @@ def train_transformer_model(train_df, test_df, label2id, max_length=128, epochs=
         compute_metrics=compute_metrics
     )
 
+    print("Trainer is using device:", trainer.args.device)
+
     trainer.train()
 
     # Evaluate and print classification report
